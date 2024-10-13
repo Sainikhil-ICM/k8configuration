@@ -21,8 +21,7 @@ spec:
       labels:
         role: api  # Change from incred-api to api to match selector
     spec:
-      imagePullSecrets:
-      - name: ecr-registry-secret
+      serviceAccountName: ecr-access-sa
       containers:
       - name: api
         image: 557690592390.dkr.ecr.ap-south-1.amazonaws.com/backend:25
