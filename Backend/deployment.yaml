@@ -24,28 +24,7 @@ spec:
       serviceAccountName: ecr-access-sa
       containers:
       - name: api
-        image: 557690592390.dkr.ecr.ap-south-1.amazonaws.com/backend:25
+        image: 557690592390.dkr.ecr.ap-south-1.amazonaws.com/hello-world:2
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-        # livenessProbe:
-        #   httpGet:
-        #     path: /healthz
-        #     port: 3000
-        #   initialDelaySeconds: 2
-        #   periodSeconds: 5
-        # readinessProbe:
-        #   httpGet:
-        #     path: /ready
-        #     port: 3000
-        #   initialDelaySeconds: 5
-        #   periodSeconds: 5
-        #   successThreshold: 1
-        # startupProbe:
-        #   httpGet:
-        #     path: /started
-        #     port: 3000
-        #   initialDelaySeconds: 0
-        #   periodSeconds: 10
-        #   failureThreshold: 30
-
